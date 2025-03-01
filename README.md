@@ -48,6 +48,6 @@ Want to add more sites?
 - Submit a PR!
 
 ##📜 License
-**MIT License - Free to use & modify!**
+- **MIT License - Free to use & modify!**
 
 # 🔥 Stay Login-Free & Browse Freely!
