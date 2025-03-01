@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Login? STFU!</title>
+    <style>
+        @font-face {
+        font-family: "Minecraft";
+        src: url("Minecraft.ttf") format("truetype");
+        }
+
+        body {
+        font-family: 'Minecraft', sans-serif;
+        width: 300px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: center;
+        }
+        h2 {
+            margin: 5px 0;
+        }
+        button {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        #info {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        p, a{
+            font-family: 'Minecraft', sans-serif;
+        }
+        #title{
+            font-size: large;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+    </style>
+</head>
+<body>
+    <p id="title">Login? Shut up!</p>
+    <u><p id="desc">A Chrome extension to block annoying login popups!</p></u>
+    
+    <label class="switch">
+        <input type="checkbox" id="toggleExtension">
+        <span class="slider"></span>
+    </label>
+
+    <p id="statusText">Extension is <b>Enabled</b></p>
+
+    <button id="showInfo">More Info</button>
+    
+    <div id="info">
+        <p>Made by: <i> Aditya Dolas </i></p>
+        <p>GitHub: <a href="https://github.coM/Adi1exe" target="_blank">Adi1exe</a></p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
