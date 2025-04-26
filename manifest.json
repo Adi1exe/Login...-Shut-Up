@@ -1,35 +1,47 @@
 {
-  "manifest_version": 3,
-  "name": "Login? Shut Up!",
-  "version": "1.0",
-  "description": "Removes annoying login popups on certain websites.",
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "permissions": ["scripting", "storage"],
-  "host_permissions": [
-    "*://*.quora.com/*",
-    "*://*.medium.com/*",
-    "*://*.pinterest.com/*",
-    "*://*.nytimes.com/*",
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.quora.com/*",
-        "*://*.medium.com/*",
-        "*://*.pinterest.com/*",
-        "*://*.nytimes.com/*",
-        "*://*.linkedin.com/*"
-      ],
-      "js": ["content.js"],
-      "run_at": "document_end"
-    }
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "Login? Shut Up!"
+    "manifest_version": 4,
+    "name": "Login? Shut Up!",
+    "version": "1.0.0",
+    "description": "Block annoying login/signup popups on websites",
+    "permissions": [
+      "storage",
+      "webNavigation",
+      "scripting",
+      "tabs",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["content.css"],
+        "run_at": "document_idle"
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["fonts/minecraft.ttf", "images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "options_page": "options.html"
   }
-}
