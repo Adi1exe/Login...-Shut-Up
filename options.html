@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login? Shut Up! - Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Login? Shut Up!</h1>
+      <h2>Options & Settings</h2>
+    </div>
+    
+    <div class="section">
+      <h3>Custom Selectors</h3>
+      <p>Add custom CSS selectors for elements to block. One per line.</p>
+      <textarea id="customSelectors" rows="8" placeholder=".login-popup
+#signup-modal
+.newsletter-overlay"></textarea>
+      <div class="buttons">
+        <button id="saveSelectors" class="minecraft-btn">Save Selectors</button>
+        <button id="resetSelectors" class="minecraft-btn">Reset to Default</button>
+      </div>
+    </div>
+    <div class="section">
+        <h3>Whitelist</h3>
+        <p>These websites will NOT have their login popups blocked:</p>
+        <textarea id="whitelistSites" rows="8" placeholder="google.com
+      gmail.com
+      github.com"></textarea>
+        <div class="buttons">
+          <button id="saveWhitelist" class="minecraft-btn">Save Whitelist</button>
+          <button id="resetWhitelist" class="minecraft-btn">Reset to Default</button>
+        </div>
+      </div>
+    
+    <div class="section">
+      <h3>Block List</h3>
+      <p>Website-specific settings:</p>
+      <div class="site-list">
+        <div class="site-item">
+          <span class="site-domain">example.com</span>
+          <div class="site-controls">
+            <select class="aggression-select">
+              <option value="1">Low</option>
+              <option value="2" selected>Medium</option>
+              <option value="3">High</option>
+            </select>
+            <button class="remove-site minecraft-btn">Remove</button>
+          </div>
+        </div>
+        <div id="sitesList"></div>
+      </div>
+      <div class="buttons">
+        <button id="addSite" class="minecraft-btn">Add Website</button>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>Advanced Settings</h3>
+      <div class="setting-row">
+        <span class="setting-label">Run on Page Load</span>
+        <label class="switch">
+          <input type="checkbox" id="runOnLoad" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">Auto-Clear Overlays</span>
+        <label class="switch">
+          <input type="checkbox" id="autoClear" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">Block Cookies Popups</span>
+        <label class="switch">
+          <input type="checkbox" id="blockCookies" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">Auto-Scroll Past Modals</span>
+        <label class="switch">
+          <input type="checkbox" id="autoScroll">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>Statistics</h3>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-title">Popups Blocked</span>
+          <span id="totalBlocked" class="stat-value">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-title">Sites Protected</span>
+          <span id="sitesProtected" class="stat-value">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-title">Time Saved</span>
+          <span id="timeSaved" class="stat-value">0 min</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="resetStats" class="minecraft-btn">Reset Statistics</button>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>Export/Import Settings</h3>
+      <div class="buttons">
+        <button id="exportSettings" class="minecraft-btn">Export Settings</button>
+        <button id="importSettings" class="minecraft-btn">Import Settings</button>
+      </div>
+      <input type="file" id="importFile" style="display: none;">
+    </div>
+    
+    <div class="footer">
+        <p>Made with ❤️ for those who hate login popups</p>
+        <p>Version 1.0.0</p>
+        <div class="author-section">
+          <p>Created by <a href="https://adityadolas.netlify.app" target="_blank" class="portfolio-link">Adi</a></p>
+          <a href="https://github.com/Adi1exe/Login...-Shut-Up" target="_blank" class="github-link">GitHub Repository</a>
+        </div>
+      </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
