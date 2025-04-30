@@ -47,7 +47,7 @@ Want to add more sites?
 - Make your changes & test
 - Submit a PR!
 
-##📜 License
+## 📜 License
 - **MIT License - Free to use & modify!**
 
 # 🔥 Stay Login-Free & Browse Freely!
